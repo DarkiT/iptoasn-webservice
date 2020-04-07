@@ -1,7 +1,7 @@
 FROM alpine:3.7
 
-COPY /Cargo.* /tmp/iptoasn/
-COPY /src /tmp/iptoasn/src
+COPY ../Cargo.* /tmp/iptoasn/
+COPY ../src /tmp/iptoasn/src
 
 WORKDIR /tmp/iptoasn
 
@@ -24,7 +24,7 @@ RUN apk add --update --no-cache ca-certificates \
             /var/cache/apk/* \
             /tmp/*
 
-COPY docker/iptoasn-entrypoint.sh /iptoasn-entrypoint.sh
+COPY ../docker/iptoasn-entrypoint.sh /iptoasn-entrypoint.sh
 RUN chmod +x /iptoasn-entrypoint.sh
 
 USER app
