@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-COPY Cargo.* /tmp/iptoasn/
+COPY Cargo.toml /tmp/iptoasn/
 COPY src /tmp/iptoasn/src
 
 WORKDIR /tmp/iptoasn
